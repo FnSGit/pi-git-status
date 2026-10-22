@@ -1,0 +1,39 @@
+{
+  "name": "pi-git-status",
+  "version": "0.1.0",
+  "description": "Real-time git worktree status line for pi footer. Tracks the agent's actual working directory through bash cd commands, renders branch / clean-dirty / ahead-behind / staged-modified-untracked counts, and picks up external terminal branch switches via gitDir polling.",
+  "type": "module",
+  "main": "./src/index.ts",
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-coding-agent",
+    "git",
+    "status",
+    "footer",
+    "extension"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^20.0.0"
+  }
+}
